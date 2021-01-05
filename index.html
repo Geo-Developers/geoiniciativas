@@ -128,6 +128,9 @@
                                 <li class="nav-item">
                                     <router-link to="/noticias" class="nav-link">Noticias</router-link>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/contribute.md" class="nav-link">Contribuir</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -168,8 +171,9 @@
                 <br>
 
                 <span class="small">
-                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/geoblogs.opml">Listado de fuentes OPML</a> (<a href="https://es.wikipedia.org/wiki/OPML">¿Qué es esto?</a>) |
-                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/contribute.md">Contribuir</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=75088066">Listado de fuentes</a>
+                    | Descargar: <a id="btnDownload" onclick="downloadTab(3)" href="#">CSV</a> /
+                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/geoblogs.opml">OPML</a> <a id="aux" style="display:none">&bnsp;</a>
                 </span>
             </p>
 
@@ -210,7 +214,6 @@
 
             return fetch(feed2json).then((response) => {
                 if (response.ok){
-                    debugger
                     return response.json();
                 }else{
                     return {items: null}
@@ -262,5 +265,6 @@
         };
 
     </script>
+    <script src="assets/js/utils.js"></script>
 </body>
 </html>
