@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><opml version="1.0"><head><title>Fluent Reader Export</title></head><body>
+<outline text="Geolocation (GIS)" name="GeoBlogs (SIG/GIS)">
+	<outline text="Magazine - geolocalizacion" name="Magazine - geolocalizacion" type="rss" xmlUrl="http://www.genbeta.com/tag/geolocalizacion/rss2.xml"/>
+	<outline text="Google Alert - geo* site:market.android.com" name="Google Alert - geo* site:market.android.com" type="rss" xmlUrl="http://www.google.com/alerts/feeds/06528984730057861669/15882287108086999607"/>
+	<outline text="El blog de Terrasit" name="El blog de Terrasit" type="rss" xmlUrl="http://terrasit.wordpress.com/feed/"/>
+	<outline text="Ambientes Geográficos" name="Ambientes Geográficos" type="rss" xmlUrl="http://ambientesgeograficos.blogspot.com/feeds/posts/default?alt=rss"/>
+	<outline text="Google Maps Platform" name="Google Maps Platform" type="rss" xmlUrl="http://googlegeodevelopers.blogspot.com/feeds/posts/default?alt=rss"/>
+	<outline text="FRANCISORTIZ.COM" name="FRANCISORTIZ.COM" type="rss" xmlUrl="http://www.francisortiz.com/feeds/posts/default?alt=rss"/>
+	<outline text="Gis&amp;Beers" name="Gis&amp;Beers" type="rss" xmlUrl="http://www.gisandbeers.com/feed/"/>
+	<outline text="Maps Mania" name="Maps Mania" type="rss" xmlUrl="http://googlemapsmania.blogspot.com/feeds/posts/default?alt=rss"/>
+	<outline text="La Cartoteca" name="La Cartoteca" type="rss" xmlUrl="http://alpoma.net/carto/?feed=rss2"/>
+	<outline text="master maps" name="master maps" type="rss" xmlUrl="http://blog.thematicmapping.org/feeds/posts/default?alt=rss"/>
+	<outline text="Geofumadas" name="Geofumadas" type="rss" xmlUrl="http://geofumadas.com/feed/"/>
+	<outline text="Geolocalización,  redes sociales y ..." name="Geolocalización,  redes sociales y ..." type="rss" xmlUrl="http://gersonbeltran.com/feed/"/>
+</outline>
+</body></opml>
