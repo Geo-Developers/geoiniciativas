@@ -16,6 +16,9 @@
 
 
     <style>
+        body{
+            font-size: .85rem;
+        }
         #intro {
             margin-top: 1rem;
         }
@@ -42,6 +45,53 @@
             background-color: #f5f5f5;
             padding: 1rem;
         }
+        h2{
+            font-size: 1.3rem;
+        }
+        table {
+            max-width: 100%;
+            margin: 10px auto;
+        }
+
+        caption {
+            font-size: 1.6em;
+            font-weight: 400;
+            padding: 10px 0;
+        }
+
+        thead th {
+            font-weight: 400;
+            background: #8a97a0;
+            color: #FFF;
+        }
+
+        tr {
+            background: #f4f7f8;
+            border-bottom: 1px solid #FFF;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #e8eeef;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #8a97a0;
+        }
+
     }
 </style>
 </head>
@@ -99,7 +149,12 @@
     </footer>
 
     <script type="text/x-template" id="home">
-        <div v-html="text"></div>
+        <div class="mt-3">
+            <p>
+                Esta página no es más que un listado colaborativo de enlaces a: <a href="#">Comunidades</a>, <a href="">Eventos</a>, <a href="">Tutoriales</a>, <a href="">Blogs</a> y <a href="">Otros recursos</a>, para personas interesadas en cualquier tema relacionado con la geografía, tecnologías geoespaciales, ciencias de la tierra, etc.
+            </p>
+            <div v-html="text"></div>
+        </div>
     </script>
 
     <script type="text/x-template" id="article-list">
@@ -118,7 +173,7 @@
                 </span>
             </p>
 
-            <ol id="article-list">
+            <ol id="article-list" v-if="posts">
                 <li v-for="post in posts">
                     <div v-if="post.title" class="card">
                         <div class="card-body">
@@ -135,12 +190,16 @@
                     </div>
                 </li>
             </ol>
+            <div v-else class="text-center">
+                <p>Lo sentimos, no se han podido cargar <a href="http://www.feedrinse.com/services/channel/?chanurl=598b30eef2bd60fa1feeb65dafe67a32">las noticias desde el servidor</a>, por favor intentételo más tarde.</p>
+                <iframe src="https://giphy.com/embed/qA9BnxUPmgWgU" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/puss-prewedding-summerbird-qA9BnxUPmgWgU">via GIPHY</a></p>
+            </div>
         </div>
     </script>
 
     <script>
         function fetchMarkdown(){
-            const markdownUrl = 'https://raw.githubusercontent.com/Geo-Developers/geoiniciativas/main/README.md';
+            const markdownUrl = 'https://geo-developers.github.io/geoiniciativas/README.md';
             return fetch(markdownUrl).then(response => response.text())
         }
 
@@ -149,9 +208,15 @@
             apikey = 'qreyxurezorzaujv0y5zsddrjmeukjmjywgdfygg',
             feed2json = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedURL)}&api_key=${apikey}&count=50`;
 
-            return fetch(feed2json).then(response => response.json()).catch(function(err){
-                console.log(err.message);
+            return fetch(feed2json).then((response) => {
+                if (response.ok){
+                    debugger
+                    return response.json();
+                }else{
+                    return {items: null}
+                }
             });
+
         }
 
         function initPage(){
@@ -159,8 +224,8 @@
         }
 
         initPage().then(([markdown, news]) => {
-            moment.locale('es');
 
+            moment.locale('es');
             const Home = Vue.component('home',{
                 template: '#home',
                 data (){
@@ -180,8 +245,8 @@
             });
 
             const routes = [
-                { path: '/noticias', component: ArticleList },
-                { path: '/', component: Home }
+            { path: '/noticias', component: ArticleList },
+            { path: '/', component: Home }
             ];
             const router = new VueRouter({ routes })
 
