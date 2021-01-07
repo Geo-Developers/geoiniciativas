@@ -1,280 +1,114 @@
-<!DOCTYPE html>
-<html lang="es" >
-<head>
-    <meta charset="UTF-8">
-    <title>GeoIniciativas en Español</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/moment-with-locales.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <link rel="alternate" type="application/rss+xml" title="Agregador de GeoBlogs" href="http://www.feedrinse.com/services/channel/?chanurl=598b30eef2bd60fa1feeb65dafe67a32" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-
-    <style>
-        body{
-            font-size: .85rem;
-        }
-        #intro {
-            margin-top: 1rem;
-        }
-        #article-list{
-            padding: 0;
-        }
-        #article-list li{
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        .rss-icon{
-            width: 30px;
-            vertical-align: middle;
-            padding-bottom: 7px;
-        }
-        .nav-item{
-            padding: 0 1rem;
-        }
-        .navbar-brand a{
-            color: white;
-        }
-        .footer {
-            width: 100%;
-            background-color: #f5f5f5;
-            padding: 1rem;
-        }
-        h2{
-            font-size: 1.3rem;
-        }
-    }
-</style>
-</head>
-
-<body>
-    <a class="github-fork-ribbon" href="https://github.com/Geo-Developers/geoiniciativas" data-ribbon="Fork me on Github" title="Fork me on GitHub">Fork me on GitHub</a>
-
-    <div id="app" class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div id="intro">
-
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <div class="d-flex flex-grow-1">
-                            <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-                            <span class="navbar-brand d-none d-lg-inline-block">
-                                <router-link to="/">GeoIniciativas</router-link>
-                            </span>
-                            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
-                                <img src="//placehold.it/40?text=LOGO" alt="logo">
-                            </a>
-                            <div class="w-100 text-right">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
-                            <ul class="navbar-nav ml-auto flex-nowrap">
-                                <li class="nav-item">
-                                    <router-link to="/" class="nav-link">Inicio</router-link>
-                                </li>
-                                <li class="nav-item">
-                                    <router-link to="/noticias" class="nav-link">Noticias</router-link>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/contribute.md" class="nav-link">Contribuir</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </nav>
-                </div>
-
-                <router-view></router-view>
-
-            </div>
-        </div>
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Scribbler - a codding landing page template for codrops</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Documentación</a></li>
+        <li class="menu__item"><a href="https://github.com/Geo-Developers/geoiniciativas" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Geo<span class="logo__thin">iniciativas</span></h1>
+      <p class="hero__description"> Comunidades, blogs, APIs, SDKs, datos, eventos, ... más que una <a href="https://github.com/sindresorhus/awesome/blob/main/awesome.md#the-awesome-manifesto">awesome list</a></p>
     </div>
+    <div class="hero__terminal">
+      <!-- <pre>
 
+        <code class="shell-session demo">geolover ~ $ </code>
+      </pre> -->
+      <img src="assets/imgs/geoiniciativas.gif">
+    </div>
+    <div class="wrapper">
 
-
-    <footer class="footer">
-        <div class="container text-center">
-            <span class="text-muted small">
-                Página desarrollada con ❤️ y licenciada bajo <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-            </span>
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">Open data</h3>
+          <p>El documento con los enlaces está licenciado bajo <a href="http://creativecommons.org/licenses/by/4.0/" class="bold">Creative Commons Attribution 4.0 International License</a> para que sean compartidos y reutilizados.</p>
         </div>
-    </footer>
-
-    <script type="text/x-template" id="home">
-        <div class="mt-3">
-            <p>
-                Listado colaborativo de enlaces a: <a href="#comunidades">comunidades</a>, <!--<a href="#Eventos">eventos</a>,--> <a href="#blogs">blogs</a> y <a href="#otras-webs">otras webs</a>, para personas interesadas en cualquier tema relacionado con la geografía, tecnologías geoespaciales, ciencias de la tierra, etc. (<a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=0">fuente original</a>)
-            </p>
-
-            <h2 id="comunidades">Comunidades</h2>
-            <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="comunidades"></div>
-
-            <!-- <h2>Eventos</h2>
-            <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="eventos"></div> -->
-
-            <h2 id="otras-webs">Otras Webs</h2>
-            <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="otras-webs"></div>
-
-            <!-- <h2>Datos</h2>
-            <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="datos"></div> -->
-
-            <h2 id="blogs">Blogs</h2>
-            <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="blogs"></div>
-
-            <!-- <div v-html="text"></div> -->
+        <div class="feature__item">
+            <h3 class="section__title">Colaborativo</h3>
+            <p>Somos un equipo abierto donde todos tenemos permiso para añadir y actualizar la información para poder tener y más actualizada lista de recursos posible, <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit" class="bold">¡únete!</a>.</p>
+          </div>
+        <div class="feature__item">
+            <h3 class="section__title">Open Source</h3>
+            <p>Nuestros scripts están licenciados bajo <a href="https://choosealicense.com/licenses/gpl-3.0/" class="bold">GPL v3.0</a>, para que puedas hacer lo que quieras con ellos. La plantilla usada para la web (<a href="https://github.com/amiechen/codrops-scribbler">"codrops-scribbler</a>) está bajo <a href="http://tympanus.net/codrops/licensing/">MIT</a>.</p>
+          </div>
+        <div class="feature__item">
+          <h3 class="section__title">Reutilizable</h3>
+          <p>Además de poder exportar los listados como CSV hemos creado un <a href="doc.html#widget" class="bold">widget</a> para facilitar que cualquiera pueda embeber los listados fácilmente en cualquier web.</p>
         </div>
-    </script>
 
-
-    <script type="text/x-template" id="article-list">
-        <div class="mt-3">
-            <h2 class="text-center">Últimas noticias</h2>
-            <p class="text-center">
-                Agregador de noticias de blogs sobre GIS/Geo en Español
-                <a href="http://www.feedrinse.com/services/channel/?chanurl=598b30eef2bd60fa1feeb65dafe67a32">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Rss_Shiny_Icon.svg" class="rss-icon">
-                </a>
-                <br>
-
-                <span class="small">
-                    <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=75088066">Listado de fuentes</a>
-                    | Descargar: <a id="btnDownload" onclick="downloadTab('1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ', 3)" href="#">CSV</a> /
-                    <a href="https://github.com/Geo-Developers/geoiniciativas/blob/main/geoblogs.opml">OPML</a>
-                </span>
-            </p>
-
-            <ol id="article-list" v-if="posts">
-                <li v-for="post in posts">
-                    <div v-if="post.title" class="card">
-                        <div class="card-body">
-                            <h2><a v-bind:href="post.link">{{ post.title }}</a></h2>
-                            <p class="small">
-                                <strong>Publicado:</strong> {{ moment(post.pubDate, 'YYYY-MM-DD h:mm:ss', 'es').fromNow() }} ({{ moment(post.pubDate, 'YYYY-MM-DD h:mm:ss', 'es').calendar() }}) |
-                                <strong>Fuente:</strong> <a v-bind:href="getHostnameFromRegex(post.link,0)">{{ getHostnameFromRegex(post.link) }}</a>
-                            </p>
-                            <div v-html="post.content"></div>
-                            <div style="text-align: right">
-                                <a v-bind:href="post.link" class="btn btn-primary">Leer más</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ol>
-            <div v-else class="text-center">
-                <p>Lo sentimos, no se han podido cargar <a href="http://www.feedrinse.com/services/channel/?chanurl=598b30eef2bd60fa1feeb65dafe67a32">las noticias desde el servidor</a>, por favor intentételo más tarde.</p>
-                <iframe src="https://giphy.com/embed/qA9BnxUPmgWgU" width="480" height="235" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/puss-prewedding-summerbird-qA9BnxUPmgWgU">via GIPHY</a></p>
-            </div>
+        <div class="feature__item">
+          <h3 class="section__title">Actualizado</h3>
+          <p>Siempre es complicado mantener un listado de enlaces (porque tienden a romperse), por eso estamos creando un <span class="bold">comprobador de enlaces rotos</span>.</p>
+          <!-- <p>Maintain all your settings in a single <span class="code code--inline">config.json</span> file. Never need to redo the setting every single time jotting down a note.</p> -->
         </div>
-    </script>
-
-    <script type="text/x-template" id="widget-page">
-        <div id="widget-page-script">
-            <h1>Widget de geoiniciativas</h1>
-
-            <p>Para embeber el listado de geoiniciativas en tu sitio sólo necesitarás usar un script como este:</p>
-            <iframe src="/embed-widget.html" style="width:100%;border:0;height:800px"></iframe>
+        <div class="feature__item">
+          <h3 class="section__title">Core</h3>
+          <p>El objetivo es poder <span class="bold">derivar proyectos</span> a partir de esta recopilación de enlaces, el widget es un ejemplo de ello. Descubre más en github.</p>
         </div>
-    </script>
 
-    <script>
-        function fetchMarkdown(){
-            const markdownUrl = 'https://geo-developers.github.io/geoiniciativas/README.md';
-            return fetch(markdownUrl).then(response => response.text())
-        }
+      </div>
+      <!-- <div class="keybinding">
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Default Keybindings</h3>
+          <li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
+          <li>Save <span class="keybinding__label">Cmd+S</span></li>
+          <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
+          <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
+        </ul>
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Markdown Keybindings</h3>
+          <li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
+          <li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
+          <li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
+          <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
+        </ul>
+      </div> -->
+      <div class="callout">
+        <p>Descubre cómo embeber los listados, descargar los datos, contribuir y mucho más</p>
+        <a href="doc.html" class="button--primary">Documentación</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Versiones</h3>
 
-        function fetchNews(){
-            const feedURL = 'http://www.feedrinse.com/services/channel/?chanurl=598b30eef2bd60fa1feeb65dafe67a32',
-            apikey = 'qreyxurezorzaujv0y5zsddrjmeukjmjywgdfygg',
-            feed2json = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedURL)}&api_key=${apikey}&count=50`;
-
-            return fetch(feed2json).then((response) => {
-                if (response.ok){
-                    return response.json();
-                }else{
-                    return {items: null}
-                }
-            });
-
-        }
-
-        function initPage(){
-            return Promise.all([fetchMarkdown(), fetchNews()]);
-        }
-
-        initPage().then(([markdown, news]) => {
-
-            moment.locale('es');
-            const Home = Vue.component('home',{
-                template: '#home',
-                data (){
-                    return {
-                        text: marked(markdown)
-                    }
-                },
-                mounted() {
-                    renderGeoIniciativasWidget();
-                }
-            });
-
-            const ArticleList = Vue.component('article-list',{
-                template: '#article-list',
-                data (){
-                    return {
-                        posts: news.items
-                    }
-                }
-            });
-
-            const WidgetPage = Vue.component('widget-page',{
-                template: '#widget-page',
-                mounted() {
-                    let externalScript = document.createElement('script')
-                    externalScript.setAttribute('src', 'https://gist.github.com/hhkaos/3ce84f98d5d991d54a8c58dc0ef3b026.js')
-                    document.getElementById("widget-page-script").appendChild(externalScript)
-                }
-
-            });
-
-            const routes = [
-            { path: '/widget', component: WidgetPage },
-            { path: '/noticias', component: ArticleList },
-            { path: '/', component: Home }
-            ];
-            const router = new VueRouter({
-                routes,
-                // mode: 'history',
-                // scrollBehavior: function(to, from, savedPosition) {
-                //     if (to.hash) {
-                //         return {selector: to.hash}
-                //     } else {
-                //         return { x: 0, y: 0 }
-                //     }
-                // },
-            })
-
-            var app = new Vue({
-                el: '#app',
-                router
-            });
-        });
-
-        const getHostnameFromRegex = (url, param = 1) => {
-            const matches = url.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
-            return matches && matches[param];
-        };
-
-    </script>
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/geoiniciativas-widget.js"></script>
-    <link rel="stylesheet" href="assets/css/geoiniciativas-widget.css" />
-</body>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v0.1</h4>
+            <small class="changelog__date">7/01/2021</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Widget para embeber los listados</li>
+              <li>Agregador de noticias (OPML)</li>
+              <li>Script para desacargar datos como CSV</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__callout">
+          <a href="https://github.com/Geo-Developers/geoiniciativas/issues" class="button--secondary">Bugs, próximas mejoras, etc.</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">Esta página ha sido adaptada a partir de la plantilla gratuita "Scribbler" desarrollada por <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
 </html>

@@ -1,6 +1,7 @@
 table.giw {
     max-width: 100%;
     margin: 10px auto;
+    word-break: break-word;
 }
 
 table.giw caption {
@@ -13,7 +14,9 @@ table.giw thead th {
     font-weight: 400;
     background: #8a97a0;
     color: #FFF;
+
 }
+
 
 table.giw tr {
     background: #f4f7f8;
@@ -29,6 +32,8 @@ table.giw th, td {
     text-align: left;
     padding: 20px;
     font-weight: 300;
+    min-width: 100px;
+    font-size: 0.8em;
 }
 
 table.giw tfoot tr {
@@ -40,6 +45,7 @@ table.giw tfoot td {
     font-size: 0.8em;
     font-style: italic;
     color: #8a97a0;
+
 }
 
 .geoiniciativas-links {

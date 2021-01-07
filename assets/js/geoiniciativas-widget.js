@@ -1,5 +1,15 @@
 var $GEO = {tab: []};
 
+let checkIfURL = function(str){
+    var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    var regex = new RegExp(expression);
+    if (str.match(regex)) {
+        return true;
+      } else {
+        return false;
+      }
+}
+
 let getSpreadsheetTab = function(spreadsheetID, tabID){
     const spreadsheetURL = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/${tabID}/public/values?alt=json`;
     return fetch(spreadsheetURL).then(response => {
@@ -113,7 +123,11 @@ const renderGeoIniciativasWidget = function(){
             cells.forEach(row => {
                 tableHTML += '<tr>';
                 for (const [key, value] of Object.entries(row)) {
-                    tableHTML += `<td>${value}</td>`
+                    if(checkIfURL(value)){
+                        tableHTML += `<td><a href="${value}">URL</a></td>`
+                    }else{
+                       tableHTML += `<td>${value}</td>`
+                    }
                 }
                 tableHTML += '</tr>';
             })
