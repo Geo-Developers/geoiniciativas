@@ -276,6 +276,8 @@ table td, table th {
   border: 1px solid var(--code-bg-color);
   padding: 0.8rem;
   font-weight: 300;
+  word-break: break-word;
+  min-width: 90px;
 }
 
 table th {
