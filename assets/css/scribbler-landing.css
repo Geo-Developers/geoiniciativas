@@ -33,11 +33,27 @@ nav {
   padding: 0;
   border-radius: 4px;
   background-color: transparent;
-  min-height: 285px;
+  /* min-height: 285px; */
   animation: fadeUp 2s;
   box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
-  height: 424px;
+  /* height: 424px; */
 }
+
+.demoWrapper {
+    box-sizing: border-box;
+    resize: horizontal;
+    overflow: auto;
+    max-width: 100%;
+    /* height: calc(100vh - 16px); */
+}
+
+.demoWrapper div {
+    width: 100%;
+    padding-bottom: 56.25%;
+    background-image: url(../../assets/imgs/geoiniciativas.gif);
+    background-size: 100%;
+}
+
 
 .hero__terminal pre {
   white-space: pre-line;

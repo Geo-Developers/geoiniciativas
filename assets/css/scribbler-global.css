@@ -27,6 +27,12 @@ a.link{
 .text-center{
     text-align: center;
 }
+.cursor-pointer{
+    cursor: pointer;
+}
+.inline-block{
+    display: inline-block;
+}
 /* normalized */
 html, body {
   padding: 0;
