@@ -4,27 +4,31 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scribbler - a codding landing page template for codropsfasd</title>
+    <title>GeoIniciativas - Una recopilación de recursos para geoentusiastas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"> -->
     <link rel="stylesheet" href="assets/css/scribbler-global.css">
     <link rel="author" href="humans.txt">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <!-- <script src="assets/js/scribbler.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script> -->
 </head>
 <body>
 
     <div id="app">
         <router-view></router-view>
 
-        <footer class="footer">Esta página ha sido adaptada a partir de la plantilla gratuita "Scribbler" desarrollada por <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+        <footer class="footer">Esta página ha sido adaptada usando <img src="assets/imgs/vue.png" class="vue-icon"/>ue y con mucho ❤️ a partir de la plantilla gratuita "Scribbler" desarrollada por <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <!--  -->
     </div>
+
+
+
+
 
     <script type="text/x-template" id="home">
         <div id="home-page">
@@ -38,43 +42,40 @@
             </nav>
             <div class="hero">
                 <h1 class="hero__title">Geo<span class="logo__thin">iniciativas</span></h1>
-                <p class="hero__description"> Comunidades, blogs, APIs, SDKs, datos, eventos, ... más que una <a href="https://github.com/sindresorhus/awesome/blob/main/awesome.md#the-awesome-manifesto">awesome list</a></p>
+                <p class="hero__description"> Comunidades, blogs, APIs, SDKs, datos, eventos, ... más que una <a href="https://github.com/sindresorhus/awesome/blob/main/awesome.md#the-awesome-manifesto">awesome list</a>.</p>
             </div>
             <div class="hero__terminal">
-                <!-- <pre>
-
-                    <code class="shell-session demo">geolover ~ $ </code>
-                </pre> -->
                 <img src="assets/imgs/geoiniciativas.gif">
             </div>
             <div class="wrapper">
-
+                <p class="text-center">Si te parece interesante, ayúdanos dando <a href="https://github.com/Geo-Developers/geoiniciativas">una <img src="assets/imgs/star.png" class="github-star"/> en Github</a>.</p>
                 <div class="feature">
                     <div class="feature__item">
-                        <h3 class="section__title">Open data</h3>
-                        <p>El documento con los enlaces está licenciado bajo <a href="http://creativecommons.org/licenses/by/4.0/" class="bold">Creative Commons Attribution 4.0 International License</a> para que sean compartidos y reutilizados.</p>
+                        <h3 class="section__title">Abierto</h3>
+                        <p>El documento con los enlaces está licenciado bajo <a href="http://creativecommons.org/licenses/by/4.0/" class="bold">Creative Commons Attribution 4.0 International License</a> para que los datos sean compartidos y reutilizados.</p>
                     </div>
                     <div class="feature__item">
                         <h3 class="section__title">Colaborativo</h3>
                         <p>Somos un equipo abierto donde todos tenemos permiso para añadir y actualizar la información para poder tener y más actualizada lista de recursos posible, <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit" class="bold">¡únete!</a>.</p>
                     </div>
                     <div class="feature__item">
-                        <h3 class="section__title">Open Source</h3>
-                        <p>Nuestros scripts están licenciados bajo <a href="https://choosealicense.com/licenses/gpl-3.0/" class="bold">GPL v3.0</a>, para que puedas hacer lo que quieras con ellos. La plantilla usada para la web (<a href="https://github.com/amiechen/codrops-scribbler">"codrops-scribbler</a>) está bajo <a href="http://tympanus.net/codrops/licensing/">MIT</a>.</p>
+                        <h3 class="section__title">Libre</h3>
+                        <p>Nuestros scripts están licenciados bajo <a href="https://choosealicense.com/licenses/gpl-3.0/" class="bold">GPL v3.0</a>, para que tengas la libertad de hacer con ellos lo que quieras. La web depende de <a href="https://github.com/amiechen/codrops-scribbler">codrops-scribbler</a> que está bajo <a href="http://tympanus.net/codrops/licensing/">MIT</a>.</p>
                     </div>
                     <div class="feature__item">
                         <h3 class="section__title">Reutilizable</h3>
-                        <p>Además de poder exportar los listados como CSV hemos creado un <a href="doc.html#widget" class="bold">widget</a> para facilitar que cualquiera pueda embeber los listados fácilmente en cualquier web.</p>
+                        <p>Además de poder exportar los listados como CSV, XLSX, ODS, PDF, ... hemos creado un <a href="doc.html#widget" class="bold">widget</a> para que puedas puedas embeber los listados en cualquier web.</p>
+                    </div>
+
+                    <div class="feature__item">
+                        <h3 class="section__title">Core</h3>
+                        <p>El objetivo es poder <span class="bold">derivar proyectos</span> a partir de esta recopilación de enlaces, el widget es un ejemplo de ello. Descubre <a href="https://github.com/topics/geoiniciativas">otros proyectos en Github</a>.</p>
                     </div>
 
                     <div class="feature__item">
                         <h3 class="section__title">Actualizado</h3>
-                        <p>Siempre es complicado mantener un listado de enlaces (porque tienden a romperse), por eso estamos creando un <span class="bold">comprobador de enlaces rotos</span>.</p>
+                        <p>Siempre es complicado mantener un listado de enlaces (porque tienden a romperse), por eso usaremos un <span class="bold">comprobador de enlaces rotos</span>.</p>
                         <!-- <p>Maintain all your settings in a single <span class="code code--inline">config.json</span> file. Never need to redo the setting every single time jotting down a note.</p> -->
-                    </div>
-                    <div class="feature__item">
-                        <h3 class="section__title">Core</h3>
-                        <p>El objetivo es poder <span class="bold">derivar proyectos</span> a partir de esta recopilación de enlaces, el widget es un ejemplo de ello. Descubre más en github.</p>
                     </div>
 
                 </div>
@@ -86,7 +87,11 @@
             </div>
             <div class="changelog">
                 <div class="wrapper">
-                    <h3 class="section__title">Versiones</h3>
+                    <h3 class="section__title">
+                        Versiones<br>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button" href="https://github.com/Geo-Developers/geoiniciativas/subscription" data-icon="octicon-eye" aria-label="Watch Geo-Developers/geoiniciativas on GitHub">Watch</a>
+                    </h3>
 
                     <div class="changelog__item">
                         <div class="changelog__meta">
@@ -95,19 +100,25 @@
                         </div>
                         <div class="changelog__detail">
                             <ul>
-                                <li>Widget para embeber los listados</li>
-                                <li>Agregador de noticias (OPML)</li>
-                                <li>Script para desacargar datos como CSV</li>
+                                <li>Documento con las primeras hojas 11 pestañas</li>
+                                <li>MVP promotional site (home y docs)</li>
                             </ul>
                         </div>
                     </div>
                     <div class="changelog__callout">
-                        <a href="https://github.com/Geo-Developers/geoiniciativas/issues" class="button--secondary">Bugs, próximas mejoras, etc.</a>
+                        <a href="https://github.com/Geo-Developers/geoiniciativas/issues" class="button--secondary"><span class="bold">Github issues</span>: Bugs, mejoras, ....</a>
                     </div>
                 </div>
             </div>
         </div>
     </script>
+
+
+
+
+
+
+
 
     <script type="text/x-template" id="docs">
         <div id="docs-page">
@@ -123,28 +134,127 @@
             <div class="wrapper">
                 <aside class="doc__nav">
                     <ul>
-                        <li class="js-btn selected">Widget</li>
-                        <li class="js-btn">Agregador de noticias</li>
-                        <li class="js-btn">Keybindings</li>
-                        <li class="js-btn">Issues</li>
-                        <li class="js-btn">Issues</li>
-                        <li class="js-btn">Issues</li>
+                        <li class="js-btn selected">Datos / Recursos</li>
+                        <li class="js-btn">Proyectos derivados</li>
+                        <li class="js-btn">Desarrolladores</li>
+                        <li class="js-btn">Contribuciones</li>
                     </ul>
                 </aside>
                 <article class="doc__content">
+
                     <section class="js-section">
-                        <h3 class="section__title" id="widget">Widget</h3>
-                        <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
-                        <h3 class="section__title">Developers</h3>
-                        <div class="hero__terminal">
-                            <pre>
-                                <!-- Place your demo code here -->
-                                <code class="shell-session demo">geolover ~ $ </code>
+                        <h3 class="section__title" id="widget">Datos / Recursos</h3>
+                        <!-- <a href="#" >Scroll</router-link> -->
+
+                        <p>Cada pestaña <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=1019140788">del documento</a> contiene un listado de recursos:</p>
+                        <ul>
+                            <li><strong>comunidades:</strong> lugares donde poder interactuar con otr@s geoentusiastas</li>
+                            <li><strong>blogs:</strong> medios que publican artículos periódicamente relacionados con las ciencias de la tierra, mapas, SIG, etc.</li>
+                            <li><strong>datos:</strong> portales con datos geolocalizados</li>
+                            <li><strong>apis:</strong> APIs agnósticas (REST normalmente) que ofrecen datos georeferenciados y/o herramientas de análisis</li>
+                            <li><strong>sdks-bibliotecas:</strong> frameworks, SDKs y bibliotecas tanto para trabajar con mapas y datos georeferenciasdos en entornos nativos y web</li>
+                            <li><strong>formatos:</strong> formatos de datos para trabajar con datos georeferenciados</li>
+                            <li><strong>eventos:</strong> eventos con foco en geoentusiastas</li>
+                            <li><strong>libros:</strong> libros para desarrollar habilidades relacionadas con las ciencias de la tierra, mapas, SIG, etc.</li>
+                            <li><strong>canales-youtube:</strong> canales de Youtube dirigidos a geoentusiastas</li>
+                            <li><strong>cursos-masters:</strong> cursos online, presenciales, en vídeo, etc</li>
+                            <li><strong>otras-webs:</strong> otros recursos que no encajar exáctamente en las categorías anteriores</li>
+                        </ul>
+                        <p>Las celdas de la primera fila pueden contener notas aclaratorias sobre cada campo, al igual que comentarios si se quiere discutir/debatir algo.</p>
+                        <p>Se crearán nuevos listados conforme se vaya considerando necesario.</p>
+                    </section>
+
+                    <section class="js-section">
+                        <h3 class="section__title">Proyectos derivados</a></h3>
+                        <p>A partir de los datos se estos datos se están creando proyectos y scrips que pueden ser de interés general para geoentusiastas:</p>
+                        <table id="customers">
+                            <tr>
+                                <th>Proyecto</th>
+                                <th>Objetivo</th>
+                                <th>Código</th>
+                            </tr>
+                            <tr>
+                                <td><a href="https://geo-developers.github.io/geoiniciativas-widget/" class="bold">geoiniciativas-widget</a></td>
+                                <td>Widget HTML que facilita embeber los datos de este proyecto en cualquier web</td>
+                                <td><a href="https://github.com/Geo-Developers/agregador-de-geoblogs">Github</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="" class="bold">agregador-de-geoblogs</a></td>
+                                <td>Un proyecto para unificar toda la geoactualidad</td>
+                                <td><a href="https://github.com/Geo-Developers/agregador-de-geoblogs">Github</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://cse.google.com/cse?cx=071ea5e1c8d03f71c" class="bold">open-data-search</a></td>
+                                <td>Metabuscador de datos abiertos.</td>
+                                <td><a href="https://github.com/esri-es/open-data-search">Github</a></td>
+                            </tr>
+                        </table>
+                        <p>Estamos intentando que todos los proyectos que usen estos datos estén etiquetados en Github con el <a href="https://github.com/topics/geoiniciativas">"topic": geoiniciativa</a>. Si encuentras alguno que no esté listado aquí por favor avísanos abriendo un issue o haciendo un pull request.</p>
+                        <p>Si quieres aportar alguna idea no dudes en leer la sección contribuciones.</p>
+                    </section>
+
+                    <section class="js-section">
+                        <h3 class="section__title">Desarrolladores</h3>
+
+                        <p>
+                            Los datos de la hoja de cálculo pueden ser consumidos vía API. Para ello puedes usar la <a href="https://developers.google.com/sheets/api/guides/migration" class="link">API de Google Sheets</a>
+                            permite recuperar los datos tanto en formato JSON como XML.
+                        </p>
+
+                        <p>En los siguientes ejemplos usaremos la versión 3 para evitar tener que generar una API_KEY de Google Console.</p>
+
+                        <table id="customers">
+                            <tr>
+                                <th>Endpoint (v3)</th>
+                                <th>Funcionalidad</th>
+                                <th>Ejemplo</th>
+                            </tr>
+                            <tr>
+                                <td>/feeds/worksheets/<span class="bold">spreadsheetId</span>/private/full</td>
+                                <td>Los metadatos del documento: título, número de pestañas, identificadores globales de las pestañas, etc.</td>
+                                <td><a href="https://spreadsheets.google.com/feeds/worksheets/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/public/full?alt=json" class="link">Mostrar JSON</a></td>
+                            </tr>
+                            <tr>
+                                <td>/feeds/list/<span class="bold">spreadsheetId</span>/<span class="bold">tabId</span>/public/values</td>
+                                <td>Permite recuperar los valores de las celdas de una pestaña concreta. El valor "spreadsheetId"</td>
+                                <td><a href="https://spreadsheets.google.com/feeds/list/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/1/public/values?alt=json" class="link">Mostrar JSON</a></td>
+                            </tr>
+                        </table>
+
+                        <p>Un ejemplo de proyecto que usa esta API es <a href="https://github.com/Geo-Developers/geoiniciativas-widget">geoiniciativas-widget</a></p>
+                    </section>
+
+                    <section class="js-section">
+                        <h3 class="section__title">Contribuciones</h3>
+                        <p>
+                            Para organizar las ideas, bugs, etc. usamos los <a href="https://github.com/Geo-Developers/geoiniciativas/issues">issues del proyecto</a>,
+                            y si lo que prefieres es tener un encuentro online con otros geoentusiastas con los que poder hablar, preguntar dudas, ... también puedes
+                            conectar al <a href="https://github.com/Geo-Developers/organization/blob/master/coworking.md#preguntas-frecuentes-acerca-del-coworking" class="bold">coworking online</a>.
+                        </p>
+
+                        <p class="section__subtitle bold">AÑADIR O MANTENER ENLACES</p>
+                        <p>Cuántos más seamos añadiendo y manteniendo estos datos más útil será, por lo que si quieres ayudar sólo tienes que abrir un issue y ponerte en contacto con nosotros</p>
+
+                        <p class="section__subtitle bold">DESARROLLADORES</p>
+
+                        <p>Una buena forma de contribuir es ayudando con <a href="https://github.com/Geo-Developers/geoiniciativas/issues">los issues</a>, ¿te animas?:</p>
+                        <div class="code__block code__block--notabs">
+                            <pre class="code code--block">
+                                <code>
+                                    $ git clone https://github.com/Geo-Developers/geoiniciativas.git
+
+                                </code>
                             </pre>
                         </div>
-                        <h3 class="section__title">Agregador de noticias</h3>
-                        <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
 
+                        <!-- <div class="hero__terminal">
+                            <pre>
+                                <code class="shell-session demo">geolover ~ $ </code>
+                            </pre>
+                        </div> -->
+                    </section>
+
+                    <!-- <section class="js-section">
                         <div class="installation">
                             <h3 class="section__title">Installation</h3>
                             <div class="tab__container">
@@ -160,79 +270,15 @@
                                 </pre>
                             </div>
                         </div>
+                    </section> -->
 
-                        <h3 class="section__title">Proyectos</h3>
-                        <ul>
-                            <li>Widget</li>
-                            <li>Agregador de noticias</li>
-                            <li>Metabuscador de contenidos</li>
-                        </ul>
-
-
-
-
-                        <h3 class="section__title">Get Started</h3>
-                        <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
-                        <h3 class="section__title">Installation</h3>
-                        <div class="code__block code__block--notabs">
-                            <pre class="code code--block">
-                                <code>
-                                    $ scribbler  ——config
-                                    {
-                                        “encryption”: true,
-                                        “highlighting“: true,
-                                        “prettyTable”: false,
-                                        “font”: [“Helvetica”, “sans-serif”],
-                                        “folder”: “~/Desktop“
-                                    }
-                                </code>
-                            </pre>
-                        </div>
-                    </section>
-                    <section class="js-section">
-                        <h3 class="section__title">Configurations</h3>
-                        <p>Learn how to configure settings for Scribbler, such as your syntax highlighting preference and the default saving folder location.</p>
-                        <table id="customers">
-                            <tr>
-                                <th>Options</th>
-                                <th>Value</th>
-                                <th>Default</th>
-                            </tr>
-                            <tr>
-                                <td>encryption</td>
-                                <td>encrypt all notes before saving. If turned on, it requires password to open the file.</td>
-                                <td>false</td>
-                            </tr>
-                            <tr>
-                                <td>highlighting</td>
-                                <td>Show syntax highlight on markdown text.</td>
-                                <td>true</td>
-                            </tr>
-                            <tr>
-                                <td>prettyTable</td>
-                                <td>Render table with Scribbler’s pretty table style.</td>
-                                <td>true</td>
-                            </tr>
-                        </table>
-                        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-                        <hr />
-                    </section>
-                    <section class="js-section">
-                        <h3 class="section__title">Keybindings</h3>
-                        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-                        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-                        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-                        <hr />
-                    </section>
-                    <section class="js-section">
-                        <h3 class="section__title">Issues</h3>
-                        <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam. Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-                        <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-                    </section>
                 </article>
             </div>
         </div>
     </script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
         <script>
 
             const Home = Vue.component('home',{
@@ -262,7 +308,17 @@
                     externalScript.setAttribute('rel', 'stylesheet');
                     externalScript.setAttribute('href', 'assets/css/scribbler-doc.css')
                     document.getElementById("docs-page").appendChild(externalScript)
+
+                    // From testing, without a brief timeout, it won't work.
+                    // setTimeout(() => this.scrollFix(this.$route.hash), 1);
                 },
+                methods: {
+                    // scrollFix: function(hashbang)
+                    // {
+                    // location.hash = hashbang;
+                    // }
+
+                }
 
             });
 
@@ -276,7 +332,17 @@
                 { path: '/', component: Home }
                 ];
                 const router = new VueRouter({
-                    routes
+                    routes,
+                    scrollBehavior(to, from, savedPosition) {
+                        if (to.hash) {
+                            VueScrollTo.scrollTo(to.hash, 700);
+                            return { selector: to.hash }
+                        } else if (savedPosition) {
+                            return savedPosition;
+                        } else {
+                            return { x: 0, y: 0 }
+                        }
+                    }
                 })
 
                 var app = new Vue({

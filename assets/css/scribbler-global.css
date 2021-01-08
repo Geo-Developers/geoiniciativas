@@ -14,7 +14,19 @@
 }
 .logo__thin {
     font-weight: 300;
-  }
+}
+.bold{
+    font-weight: 800;
+}
+a.bold{
+    text-decoration: underline;
+}
+a.link{
+    text-decoration: underline
+}
+.text-center{
+    text-align: center;
+}
 /* normalized */
 html, body {
   padding: 0;
@@ -50,6 +62,15 @@ hr {
   color: var(--primary-color);
 }
 
+.section__subtitle {
+    font-size: 0.8rem
+}
+.github-star{
+    width: 13px;
+}
+.vue-icon{
+    width: 13px;
+}
 /* tabs */
 .tab__container {
   position: relative;

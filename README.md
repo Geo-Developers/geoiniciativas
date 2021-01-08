@@ -2,7 +2,7 @@
 
 Más info: [geo-developers.github.io/geoiniciativas/](https://geo-developers.github.io/geoiniciativas/)
 
-![Spreadsheet GIF](https://geo-developers.github.io/geoiniciativas/assets/imgs/geoiniciativas.gif)
+[![Spreadsheet GIF](https://geo-developers.github.io/geoiniciativas/assets/imgs/geoiniciativas.gif)](https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit)
 
 ## Contribuir
 
