@@ -132,6 +132,7 @@ hr {
 .code--block {
   white-space: pre-line;
   padding: 0 1.5rem;
+  overflow-wrap: break-word;
 }
 
 .code--inline {
