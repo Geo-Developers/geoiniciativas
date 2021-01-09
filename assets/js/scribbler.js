@@ -12,15 +12,7 @@ var getAll = function (selector, scope) {
 // setup typewriter effect in the terminal demo
 if (document.getElementsByClassName('demo').length > 0) {
   var i = 0;
-  var txt = `cat geocategories.md
-
-            - 👥 Comunidades
-            - 📝 Blogs
-            - 🛠️ APIs
-            - 👨‍💻 SDKs
-            - 🗺️ Datos
-            - 📅 Eventos
-            - ... y mucho más`;
+  var txt = `curl 'https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20E%20WHERE%20B%20%3D%20%27Geocoding%27&gid=254964896'`;
   var speed = 60;
 
   function typeItOut () {

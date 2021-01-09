@@ -27,7 +27,7 @@ nav {
 
 .hero__terminal {
   width: 750px;
-  margin: -11rem auto 3rem auto;
+  margin: -11rem auto 1.5rem auto;
   text-align: left;
   color: white;
   padding: 0;
@@ -38,7 +38,20 @@ nav {
   box-shadow: 0px 12px 36.8px 9.2px rgba(0, 0, 0, 0.1);
   /* height: 424px; */
 }
+#intro-animation{
+    max-width: 750px !important;
+}
+#intro-animation pre code{
+    min-height: 44px;
 
+}
+#intro-animation pre{
+    /* height: 65px; */
+    padding: 0;
+    position: relative;
+    margin-top: -25px;
+}
+#intro-animation pre
 .demoWrapper {
     box-sizing: border-box;
     resize: horizontal;

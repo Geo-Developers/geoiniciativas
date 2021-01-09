@@ -41,18 +41,29 @@
                 </ul>
             </nav>
             <div class="hero">
-                <h1 class="hero__title">Geo<span class="logo__thin">iniciativas</span></h1>
-                <p class="hero__description"> Comunidades, blogs, APIs, SDKs, datos, eventos, ... más que una <a href="https://github.com/sindresorhus/awesome/blob/main/awesome.md#the-awesome-manifesto">awesome list</a>.</p>
+                <h1 class="hero__title">Geoiniciativas<span class="logo__thin">DB</span></h1>
+                <p class="hero__description">
+                    Más que una <a href="https://github.com/sindresorhus/awesome/blob/main/awesome.md#the-awesome-manifesto" class="link">awesome list</a>: hoja de cálculo + API de datos estructurados.
+                </p>
             </div>
+
             <div class="hero__terminal ">
                 <div class="demoWrapper">
                     <div onclick="location.href='https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit';" class="cursor-pointer">
                     <!-- <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit"><img src=""></a> -->
                     </div>
                 </div>
+
             </div>
-            <div class="wrapper">
+            <div class="wrapper break-word text-left" id="intro-animation">
                 <p class="text-center">Si te parece interesante, ayúdanos dando <a href="https://github.com/Geo-Developers/geoiniciativas">una <img src="assets/imgs/star.png" class="github-star"/> en Github</a>.</p>
+                <div class="text-center">Consulta via API: <span class="code code--inline">select A, E WHERE B = 'Geocoding'</span></div>
+                <pre>
+                    <code class="shell-session demo break-word">workspace ~ $ </code>
+                </pre>
+            </div>
+
+            <div class="wrapper">
                 <div class="feature">
                     <div class="feature__item">
                         <h3 class="section__title">Abierto</h3>
@@ -128,7 +139,7 @@
         <div id="docs-page">
             <div class="doc__bg"></div>
             <nav class="header">
-                <h1 class="logo"><router-link to="/">Geo<span class="logo__thin">iniciativas</span></router-link></h1>
+                <h1 class="logo"><router-link to="/">Geoiniciativas<span class="logo__thin">DB</span></router-link></h1>
                 <ul class="menu">
                     <div class="menu__item toggle"><span></span></div>
                     <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
@@ -287,7 +298,7 @@
                         <h3 class="section__title">Usuarios de GSheets</h3>
 
                         <p>
-                            Una función bastante desconocida pero muy interesante de GSheets es <a href="https://support.google.com/docs/answer/3093340?hl=en" class="link">IMPORTRANGE</a>.
+                            Una función bastante desconocida pero muy interesante de Google Sheets es <a href="https://support.google.com/docs/answer/3093340?hl=en" class="link">IMPORTRANGE</a>.
                             Esta permite importar un intervalo de celdas de una hoja de cálculo específica a otra. De este modo podemos crear nuevas hojas de cálculo que
                             mantengan siempre los datos actualizados importándolos de la hoja de datos original como se puede ver a continuación:
                         </p>
@@ -336,7 +347,7 @@
                             dicha consulta hay que codificarla (en UTF-8) antes de añadirla a la URL, por lo que quedaría:
                         </p>
                         <div class="code__block code__block--notabs">
-                            <pre class="code code--block"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link">
+                            <pre class="code code--block"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link">
                                     https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=<span class="bold">select%20A%2C%20B</span>
                                 </a>
                             </pre>
