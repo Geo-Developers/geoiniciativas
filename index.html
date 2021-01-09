@@ -7,7 +7,7 @@
     <title>GeoIniciativas - Una recopilación de recursos para geoentusiastas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
     <link rel="stylesheet" href="assets/css/scribbler-global.css">
     <link rel="author" href="humans.txt">
 
@@ -140,7 +140,13 @@
                     <ul>
                         <li class="js-btn selected">Datos / Recursos</li>
                         <li class="js-btn">Proyectos derivados</li>
+                        <li class="js-btn subcategory">&nbsp;- geoiniciativas-widget</li>
+                        <li class="js-btn subcategory">&nbsp;- agregador-de-geoblogs</li>
+                        <li class="js-btn subcategory">&nbsp;- open-data-search</li>
+                        <li class="js-btn">Usuarios de GSheets</li>
                         <li class="js-btn">Desarrolladores</li>
+                        <li class="js-btn subcategory">&nbsp;- Google Viz API</li>
+                        <li class="js-btn subcategory">&nbsp;- Google Sheets API</li>
                         <li class="js-btn">Contribuciones</li>
                     </ul>
                 </aside>
@@ -153,19 +159,62 @@
                         <p>Para quedarte una copia local de los datos puedes <a href="https://support.google.com/docs/answer/49114?co=GENIE.Platform%3DDesktop&hl=es#zippy=%2Chacer-una-copia-de-un-archivo" class="link">hacer una copia</a> <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=1019140788" class="link">del documento</a> o usar la opción de <a href="https://support.google.com/docs/answer/9330963?hl=es" class="link">exportar hojas de cálculo</a>.</p>
 
                         <p>Cada pestaña contiene un listado de recursos:</p>
-                        <ul>
-                            <li><strong>comunidades:</strong> lugares donde poder interactuar con otr@s geoentusiastas</li>
-                            <li><strong>blogs:</strong> medios que publican artículos periódicamente relacionados con las ciencias de la tierra, mapas, SIG, etc.</li>
-                            <li><strong>datos:</strong> portales con datos geolocalizados</li>
-                            <li><strong>apis:</strong> APIs agnósticas (REST normalmente) que ofrecen datos georeferenciados y/o herramientas de análisis</li>
-                            <li><strong>sdks-bibliotecas:</strong> frameworks, SDKs y bibliotecas tanto para trabajar con mapas y datos georeferenciasdos en entornos nativos y web</li>
-                            <li><strong>formatos:</strong> formatos de datos para trabajar con datos georeferenciados</li>
-                            <li><strong>eventos:</strong> eventos con foco en geoentusiastas</li>
-                            <li><strong>libros:</strong> libros para desarrollar habilidades relacionadas con las ciencias de la tierra, mapas, SIG, etc.</li>
-                            <li><strong>canales-youtube:</strong> canales de Youtube dirigidos a geoentusiastas</li>
-                            <li><strong>cursos-masters:</strong> cursos online, presenciales, en vídeo, etc</li>
-                            <li><strong>otras-webs:</strong> otros recursos que no encajar exáctamente en las categorías anteriores</li>
-                        </ul>
+
+                        <table id="customers">
+                            <tr>
+                                <th>Pestaña</th>
+                                <th>Contenido</th>
+
+                            </tr>
+                            <tr>
+                                <td>comunidades</td>
+                                <td>Lugares donde poder interactuar con otr@s geoentusiastas</td>
+                            </tr>
+                            <tr>
+                                <td>blogs</td>
+                                <td>Medios que publican artículos periódicamente relacionados con las ciencias de la tierra, mapas, SIG, etc.</td>
+
+                            </tr>
+                            <tr>
+                                <td>datos</td>
+                                <td>Portales con datos geolocalizados</td>
+                            </tr>
+                            <tr>
+                                <td>apis</td>
+                                <td>APIs agnósticas (REST normalmente) que ofrecen datos georeferenciados y/o herramientas de análisis</td>
+                            </tr>
+                            <tr>
+                                <td>sdks-bibliotecas</td>
+                                <td>Frameworks, SDKs y bibliotecas tanto para trabajar con mapas y datos georeferenciasdos en entornos nativos y web</td>
+                            </tr>
+                            <tr>
+                                <td>formatos</td>
+                                <td>Formatos de datos para trabajar con datos georeferenciados</td>
+                            </tr>
+                            <tr>
+                                <td>eventos</td>
+                                <td>Eventos con foco en geoentusiastas</td>
+                            </tr>
+                            <tr>
+                                <td>libros</td>
+                                <td>Libros para desarrollar habilidades relacionadas con las ciencias de la tierra, mapas, SIG, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>canales-youtube</td>
+                                <td>Canales de Youtube dirigidos a geoentusiastas</td>
+                            </tr>
+                            <tr>
+                                <td>cursos-masters</td>
+                                <td>Cursos online, presenciales, en vídeo, etc</td>
+                            </tr>
+                            <tr>
+                                <td>otras-webs</td>
+                                <td>Otros recursos que no encajar exáctamente en las categorías anteriores</td>
+                            </tr>
+
+                        </table>
+
+
                         <p>Las celdas de la primera fila pueden contener notas aclaratorias sobre cada campo, al igual que comentarios si se quiere discutir/debatir algo.</p>
                         <p>Se crearán nuevos listados conforme se vaya considerando necesario.</p>
                     </section>
@@ -173,38 +222,161 @@
                     <section class="js-section">
                         <h3 class="section__title">Proyectos derivados</a></h3>
                         <p>A partir de los datos se estos datos se están creando proyectos y scrips que pueden ser de interés general para geoentusiastas:</p>
-                        <table id="customers">
-                            <tr>
-                                <th>Proyecto</th>
-                                <th>Objetivo</th>
-                                <th>Código</th>
-                            </tr>
-                            <tr>
-                                <td><a href="https://geo-developers.github.io/geoiniciativas-widget/" class="bold">geoiniciativas-widget</a></td>
-                                <td>Widget HTML que facilita embeber los datos de este proyecto en cualquier web</td>
-                                <td><a href="https://github.com/Geo-Developers/geoiniciativas-widget">Github</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://geo-developers.github.io/agregador-de-geoblogs/#/" class="bold">agregador-de-geoblogs</a></td>
-                                <td>Un proyecto para unificar toda la geoactualidad</td>
-                                <td><a href="https://github.com/Geo-Developers/agregador-de-geoblogs">Github</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://cse.google.com/cse?cx=071ea5e1c8d03f71c" class="bold">open-data-search</a></td>
-                                <td>Metabuscador de datos abiertos.</td>
-                                <td><a href="https://github.com/esri-es/open-data-search">Github</a></td>
-                            </tr>
-                        </table>
+
                         <p>Estamos intentando que todos los proyectos que usen estos datos estén etiquetados en Github con el <a href="https://github.com/topics/geoiniciativas">"topic": geoiniciativa</a>. Si encuentras alguno que no esté listado aquí por favor avísanos abriendo un issue o haciendo un pull request.</p>
                         <p>Si quieres aportar alguna idea no dudes en leer la sección contribuciones.</p>
+                    </section>
+
+                    <section class="js-section">
+                        <h4 class="bold">- geoiniciativas-widget</a></h4>
+                        <p>Embebe los datos de cualquier pestaña de la hoja de cálculo en cualquier página web usando un script como este.</p>
+                        <pre class="code dark code--block">
+                            <code class="html">
+                                {{widgetScript}}
+                            </code>
+                        </pre>
+                        <p class="text-center">
+                            <span class="bold">Demo</span>: <a href="https://geo-developers.github.io/geoiniciativas-widget/" class="link">live demo</a> |
+                            <span class="bold">Documentación</span>: <a href="https://github.com/Geo-Developers/geoiniciativas-widget" class="link">github.com/Geo-Developers/geoiniciativas-widget</a>
+                        </p>
+                    <section>
+
+                        <section class="js-section">
+                        <h4 class="bold">- agregador-de-geoblogs</a></h4>
+                        <p>
+                            Con el objetivo facilitar la lectura de las últimas noticias sobre de los blogs sobre GEO en español
+                            <span class="bold">se han reutilizado los datos de la <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=75088066" class="link">pestaña "blogs"</a></span>
+                            para crear un <a ref="https://es.wikipedia.org/wiki/RSS" class="link">RSS</a> unificado que contiene las últimas noticias
+                            en un solo sitio. De este modo se ofrece la posibilidad de acceder a toda la geoactualidad desde un único sitio y como cada
+                            uno prefiera vía: Una interfaz web, suscripción por email o lector de RSS que permita importar Fichero OPML.
+                        </p>
+                        <p class="text-center">
+                            <a href="https://geo-developers.github.io/agregador-de-geoblogs/#/">
+                                <img src="assets/imgs/agregador-noticias.png" alt="Captura de pantalla del agregador de noticias">
+                            </a>
+                        </p>
+                        <p class="text-center">
+                            <span class="bold">Visor web</span>: <a href="https://geo-developers.github.io/agregador-de-geoblogs/#/" class="link">minimal interface</a> |
+                            <span class="bold">Documentación</span>: <a href="https://github.com/Geo-Developers/agregador-de-geoblogs" class="link">github.com/Geo-Developers/agregador-de-geoblogs</a>
+                        </p>
+                    <section>
+
+                    <section class="js-section">
+                        <h4 class="bold">- open-data-search</a></h4>
+                        <p>
+                            <span class="bold">Usando los datos de <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=746167425" class="link">la pestaña "datos"</a></span>
+                            se está creando el mayor [meta]buscador de datos abiertos. Este buscador actualmente busca en +250 fuentes (portales de datos abiertos, de transparencia, IDEs, INE, catastro, INE, IGN, ...)
+                        </p>
+                        <p>
+                            La implementación actual usa <a href="https://programmablesearchengine.google.com/about/" class="link">Programmable Search Engine de Google</a>
+                            que permite fácilmente unificar fuentes y usar
+                            los mismos <a href="https://github.com/esri-es/arcgis-search/blob/master/README.md#advanced-google-search-tips" class="link">parámetros avanzados de de búsqueda</a>
+                            que el buscador de Google.
+                        </p>
+                        <p class="text-center">
+                            <img src="assets/imgs/open-data-search.png" alt="Captura de pantalla del buscador de datos abiertos">
+                        </p>
+                        <p class="text-center">
+                            <span class="bold">Demo</span>: <a href="https://cse.google.com/cse?cx=071ea5e1c8d03f71c" class="link">Programmable Search Engine</a> |
+                            <span class="bold">Documentación</span>: <a href="https://github.com/esri-es/open-data-search" class="link">github.com/esri-es/open-data-search</a>
+                        </p>
+
+                    <section>
+
+                    <section class="js-section">
+                        <h3 class="section__title">Usuarios de GSheets</h3>
+
+                        <p>
+                            Una función bastante desconocida pero muy interesante de GSheets es <a href="https://support.google.com/docs/answer/3093340?hl=en" class="link">IMPORTRANGE</a>.
+                            Esta permite importar un intervalo de celdas de una hoja de cálculo específica a otra. De este modo podemos crear nuevas hojas de cálculo que
+                            mantengan siempre los datos actualizados importándolos de la hoja de datos original como se puede ver a continuación:
+                        </p>
+                        <p class="text-center">
+                            <img src="assets/imgs/importrange-gsheets.gif" alt="Animación mostrando cómo funciona">
+                        </p>
+                        <p>
+                            Si no estás familiarizado con las <a href="https://support.google.com/docs/table/25273?hl=es&ref_topic=9199554" class="link">funciones de Google Sheets</a>
+                            te recomendamos que les eches un vistazo, hay funciones como <a href="https://support.google.com/docs/answer/3093343" class="link">QUERY</a> que además permiten
+                            filtrar los datos del rango importado usando consultas parecidas a SQL.
+                        </p>
                     </section>
 
                     <section class="js-section">
                         <h3 class="section__title">Desarrolladores</h3>
 
                         <p>
-                            Los datos de la hoja de cálculo pueden ser consumidos vía API. Para ello puedes usar la <a href="https://developers.google.com/sheets/api/guides/migration" class="link">API de Google Sheets</a>
-                            permite recuperar los datos tanto en formato JSON como XML.
+                            El objetivo último de este proyecto es que los datos se usen lo máximo posible, por eso explicamos a continuación dos formatos
+                            para consumirlos vía API.
+                        </p>
+                    </section>
+
+                    <section class="js-section">
+                        <h4 class="bold">Google Viz API</h4>
+                        <p>
+                            Usando la <a href="https://developers.google.com/chart/interactive/docs/querylanguage" class="link">Google Visualization API Query Language</a> podemos
+                            lanzar consultas similares a como lo haríamos con SQL para recuperar todos o subconjuntos de datos filtrados.
+                        </p>
+                        <p>
+                            Para ello sólo tendremos que usar la misma URL del spreadsheet pero terminada en <span class="code code--inline">/gviz/tq?tq=CONSULTA&gid=ID_HOJA</span>.
+                        </p>
+                        <p>
+                            Por ejemplo, para extraer todas las filas de las columnas "Nombre" y "URL" (columnas A y B respectivamente) de la hoja "comunidades" (primera pestaña),
+                            tendremos que usar la consulta: <span class="code code--inline">select A, B</span>.
+                        </p>
+                        <p class="text-center">
+                            <img src="assets/imgs/pestania-comunidades.png">
+                        </p>
+                        <p>
+                            <a href="https://developers.google.com/chart/interactive/docs/querylanguage#setting-the-query-in-the-data-source-url" class="link">Como se indica en la documentación</a>,
+                            dicha consulta hay que codificarla (en UTF-8) antes de añadirla a la URL, por lo que quedaría:
+                        </p>
+                        <div class="code__block code__block--notabs">
+                            <pre class="code code--block"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link">
+                                    https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=<span class="bold">select%20A%2C%20B</span>
+                                </a>
+                            </pre>
+                        </div>
+                        <p>
+                            Si por ejemplo quisiéramos recuperar sólo los nombres y URLs de todas las APIs de geocodificación de la
+                            <a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/edit#gid=254964896" class="link">pestaña "apis"</a>
+                            (id: 254964896):
+                        </p>
+                        <p class="text-center">
+                            <img src="assets/imgs/pestania-apis.png" alt="Captura de la pestaña API de la hoja de cálculo">
+                        </p>
+                        <p>
+                            Usaríamos la consulta: <span class="code code--inline">select A, E WHERE B = 'Geocoding'</span>, y querdaría:
+                        </p>
+                        <div class="code__block code__block--notabs">
+                            <pre class="code code--block"><a href="https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20B" class="link">
+                                    https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=<span class="bold">select%20A%2C%20E%20WHERE%20B%20%3D%20'Geocoding'</span>&gid=<span class="bold">254964896</span>
+                                </a>
+                            </pre>
+                        </div>
+                        <p>
+                            A continuación dejamos un script en JavaScript que puede ser utilizado para facilitar la codificación de las URLs:
+                        </p>
+                        <pre class="code dark code--block">
+                            <code class="javascript">
+                            const getDataVizURL = function(query, gid = null){
+                                &nbsp;&nbsp; const baseUrl = 'https://docs.google.com/spreadsheets/d/',
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   sheetID = '1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ',
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   endpoint = '/gviz/tq?tq=',
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    prefix = `${baseUrl}${sheetID}${endpoint}`;
+
+                                &nbsp;&nbsp;return (gid)? `${prefix}${encodeURIComponent(query)}&gid=${gid}`: `${prefix}${encodeURIComponent(query)}`;
+                            }
+                            // Ejemplo de uso: getDataVizURL("select A, E WHERE B = 'Geocoding'",'144636878')
+                            // Devolvería: https://docs.google.com/spreadsheets/d/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/gviz/tq?tq=select%20A%2C%20E%20WHERE%20B%20%3D%20'Geocoding'&gid=144636878
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section class="js-section">
+                        <h4 class="bold">Google Sheets API</h4>
+                        <p>
+                            La <a href="https://developers.google.com/sheets/api/guides/migration" class="link">API de Google Sheets</a>
+                            también permite recuperar todos los datos de cada pestaña individualmente tanto en formato JSON como XML.
                         </p>
 
                         <p>En los siguientes ejemplos usaremos la versión 3 para evitar tener que generar una API_KEY de Google Console.</p>
@@ -213,21 +385,21 @@
                             <tr>
                                 <th>Endpoint (v3)</th>
                                 <th>Funcionalidad</th>
-                                <th>Ejemplo</th>
+                                <th>Demo</th>
                             </tr>
                             <tr>
                                 <td>/feeds/worksheets/<span class="bold">spreadsheetId</span>/private/full</td>
                                 <td>Los metadatos del documento: título, número de pestañas, identificadores globales de las pestañas, etc.</td>
-                                <td><a href="https://spreadsheets.google.com/feeds/worksheets/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/public/full?alt=json" class="link">Mostrar JSON</a></td>
+                                <td><a href="https://spreadsheets.google.com/feeds/worksheets/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/public/full?alt=json" class="link">JSON</a></td>
                             </tr>
                             <tr>
                                 <td>/feeds/list/<span class="bold">spreadsheetId</span>/<span class="bold">tabId</span>/public/values</td>
                                 <td>Permite recuperar los valores de las celdas de una pestaña concreta. El valor "spreadsheetId"</td>
-                                <td><a href="https://spreadsheets.google.com/feeds/list/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/1/public/values?alt=json" class="link">Mostrar JSON</a></td>
+                                <td><a href="https://spreadsheets.google.com/feeds/list/1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ/1/public/values?alt=json" class="link">JSON</a></td>
                             </tr>
                         </table>
 
-                        <p>Un ejemplo de proyecto que usa esta API es <a href="https://github.com/Geo-Developers/geoiniciativas-widget">geoiniciativas-widget</a></p>
+                        <p>Nota: el proyecto <a href="https://github.com/Geo-Developers/geoiniciativas-widget">geoiniciativas-widget</a> se ha desarrollado usando esta API.</p>
                     </section>
 
                     <section class="js-section">
@@ -245,10 +417,9 @@
 
                         <p>Una buena forma de contribuir es ayudando con <a href="https://github.com/Geo-Developers/geoiniciativas/issues">los issues</a>, ¿te animas?:</p>
                         <div class="code__block code__block--notabs">
-                            <pre class="code code--block">
+                            <pre class="code dark code--block">
                                 <code>
                                     $ git clone https://github.com/Geo-Developers/geoiniciativas.git
-
                                 </code>
                             </pre>
                         </div>
@@ -317,6 +488,33 @@
 
                     // From testing, without a brief timeout, it won't work.
                     // setTimeout(() => this.scrollFix(this.$route.hash), 1);
+                },
+                data(){
+
+                    const str = `
+                    <div class="geoiniciativas-widget" data-sheetid="1bF4YYH7bXPSLI___zMfh3tDfSxDlWWZLkkuT5vD4zHQ" data-tab="sdks-bibliotecas"></div>
+
+                    \<script\>
+  (function() {
+    const  repoUrl = "https://geo-developers.github.io/geoiniciativas-widget",
+           js = document.createElement("script");
+           css = document.createElement("link");
+
+    js.type = "text/javascript";
+    js.src = repoUrl + "/geoiniciativas-widget.js";
+
+    css.rel = "stylesheet"
+    css.href = repoUrl + "/geoiniciativas-widget.css",
+
+    document.querySelector("head").appendChild(js);
+    document.querySelector("head").appendChild(css);
+  })();
+  \</script\>;`;
+
+                    return {
+                        widgetScript: str
+                    }
+
                 },
                 methods: {
                     // scrollFix: function(hashbang)

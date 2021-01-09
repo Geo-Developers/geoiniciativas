@@ -20,7 +20,12 @@ html, body {
   .hero__description {
     margin: -1rem auto 2rem auto;
   }
-
+.js-btn.subcategory{
+    font-size: .85rem;
+}
+.js-section img{
+    max-width: 70%;
+}
   .hero__terminal {
     width: 60%;
     margin: 0rem auto 3rem auto;
